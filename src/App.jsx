@@ -40,15 +40,18 @@ export default function App() {
 
           <section className="answer-section">
             {questions[currentQuestion].answerOptions.map((item) => (
-               <button className="optionsImg" onClick={() => handleClick(item.isCorrect)}>
+               <button onClick={() => handleClick(item.isCorrect)}>
                 {item.answerText} 
               </button> 
               
               
 
             ))}
-            {questions[currentQuestion].answerOptions.map((e,index)=> (
-              <img  key={index} className="optionsImg" src={e.answerOptions} alt="" />
+            {questions[currentQuestion].answerOptions.map((e,index)=> ( 
+              <div>
+              {console.log("jiiiiiiiiii" ,e.answerText)}
+              <img className="optionsImg" src={e.answerText} alt="img"/>
+              </div>
             ))}
           </section>
         </>
