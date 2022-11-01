@@ -21,45 +21,39 @@ p {
 }
 
 .answer-section {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: start;
+  gap: 20px;
   position: relative;
   margin: 20px auto; 
-  /* max-width: 300px; */
-  row-gap: 30px;
-  padding: 20px 40px;
-  column-gap: 15px;
-  border: 1px solid red;
+ 
 }
 .optionsImg{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  /* width: 40px;
-  height: 40px; */
+  width: 120px;
+  height: 120px;
 }
 
-button {
-  position: relative;
+.back-btn {
+  border-radius: 5px;
   width: 100px;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #2b3868;
-  border-radius: 3px;
-  padding: 5px;
-  align-items: center;
-  cursor: pointer;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: #6B6FBC;
+}
+.buttonM {
+  color: white;
+  /* min-width: 60px; */
+  background-color: #6B6FBC;
   border: none;
-  text-align: center;
 }
-.button:hover{
-  color: #2b3868;
-  opacity: 0.5;
-  background-color: aquamarine;
+.buttonM :hover{
+  transition: 0.4s all ease;
+  transform: scaleX(1.05);
 }
+
+
 
 .showScore-section {
   font-size: 35px;
@@ -84,5 +78,6 @@ button {
   button {
     width: 100%;
     min-width: 60px;
+    background-color: #6B6FBC;
   }
 }

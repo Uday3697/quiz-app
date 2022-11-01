@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { questions } from "./questions";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 
 export default function App() {
@@ -8,6 +9,11 @@ export default function App() {
   const [score, setScore] = React.useState(0);
   const [showScore, setShowScore] = React.useState(false);
 
+  const handleBack=()=>{
+    if(currentQuestion>0){
+      setCurrentQuestion(currentQuestion-1)
+    }
+  }
   const handleClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -20,7 +26,7 @@ export default function App() {
       setShowScore(true);
     }
   };
-  const btImages=[questions[currentQuestion].answerOptions]
+
 
   return (
     <div className="app">
@@ -40,20 +46,19 @@ export default function App() {
 
           <section className="answer-section">
             {questions[currentQuestion].answerOptions.map((item) => (
-               <button onClick={() => handleClick(item.isCorrect)}>
-                {item.answerText} 
+               <button className="buttonM" onClick={() => handleClick(item.isCorrect)}>
+                <img className="optionsImg" src={item.answerText} alt="img"/>
               </button> 
               
               
 
             ))}
-            {questions[currentQuestion].answerOptions.map((e,index)=> ( 
-              <div>
-              {console.log("jiiiiiiiiii" ,e.answerText)}
-              <img className="optionsImg" src={e.answerText} alt="img"/>
-              </div>
-            ))}
+        
           </section>
+          <button  className="buttonM" onClick={()=>handleBack()}
+           style={{border:'0.5px solid grey',marginLeft:'10px'}}>
+          <AiOutlineArrowLeft className="back-btn"/> 
+           </button>
         </>
       )}
     </div>
