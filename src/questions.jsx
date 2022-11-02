@@ -3,10 +3,10 @@ export const questions = [
     questionImg:"1q.png",
     questionText: "Which shape should be in the rightmost cell with a question mark?",
     answerOptions: [
-      { answerText: "1q1.png", isCorrect: true },
+      { answerText: "1q1.png", isCorrect: false },
       { answerText: "1q2.png", isCorrect: false },
       { answerText: "1q3.png", isCorrect: false },
-      { answerText: "1q4.png", isCorrect: false },
+      { answerText: "1q4.png", isCorrect: true },
       { answerText: "1q5.png", isCorrect: false },
       { answerText: "1q6.png", isCorrect: false },
     ],
